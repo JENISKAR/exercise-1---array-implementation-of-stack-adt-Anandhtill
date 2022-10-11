@@ -1,55 +1,53 @@
-import os
-class Stack:
-    def __init__(self, size):
-        self.items = [None]*size
-        self.size = size
-        self.top = -1
+class Stack():
+def init (self,Range):
+self.Range = Range
+self.array = list()
+self.top = -1
+def Push(self,value):
+self.top += 1
+self.array.append(value)
+if(len(self.array) > self.Range):
+print("The Stack is in the OverFlow is condition")
 
-    def is_empty(self):
-        if (self.top == -1):
-            
-            return True
-        else:
-            return False
-        # Write code here
+2
 
-    def is_full(self):
-        if (self.top == self.size-1):
-           return True
-        else:
-           return False
-        # Write code here
+def pop(self):
+if(self.top ==
+-1):
 
-    def push(self, data):
-        if not self.is_full():
-            self.top += 1
-            
-            self.items[self.top] = data
+print("Stack is a empty")
+else:
+self.top
+-= 1
+self.array.pop()
+def peek(self):
+print(self.array[self.top])
+def display(self):
+if(len(self.array) == 0):
+print("Stack is Empty")
+else:
+print(self.array)
+Range
+= int(input("Enter the Range of the Stack:"))
+obj
+= Stack(Range)
+while(1):
+print("Press 1 for Push")
+print("Press 2 for Pop")
+print("Press 3 for Peek")
+print("Press
 
-            # Write code here
+4 for Display")
 
-    def pop(self):
-        if not self.is_empty():
-            data = self.items[self.top]
-            
-            self.top -= 1
-            return data
-            # Write code here
-
-    def status(self):
-        for i in range(self.top+1):
-            
-            print(self.items[i])
-
-        # Write code here
-
-# Do not change the following code
-size, queries = map(int, input().rstrip().split())
-stack = Stack(size)
-for line in range(queries):
-    values = list(map(int, input().rstrip().split()))
-    if values[0] == 1:
-        stack.push(values[1])
-    elif values[0] == 2:
-        stack.pop()
-stack.status()
+op
+= int(input("Enter the option:"))
+if(op == 1): x = int(input("Enter the element to push:"))
+obj.Push(x)
+elif(op == 2):
+obj.pop()
+elif(op == 3):
+obj.peek()
+elif(op == 4):
+obj.display()
+else:
+print("Error")
